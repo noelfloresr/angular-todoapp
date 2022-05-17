@@ -1,0 +1,43 @@
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+form {
+  margin-top: 30px;
+  display: flex;
+  input {
+    width: 100%;
+    padding: 10px;
+  }
+  button {
+    background: #009EC2;
+    color: white;
+    padding: 10px;
+    margin-left: 15px;
+  }
+}
+
+ul {
+  margin-top: 30px;
+  li {
+    padding: 15px;
+    border: 1px solid #EEEEEE;
+    display: flex;
+    justify-content: space-between;
+    button {
+      margin-left: 10px;
+      color: #009EC2;
+    }
+    &:hover {
+      background-color: #ff5964;
+      color: white;
+      button {
+        color: white;
+      }
+    }
+
+  }
+}

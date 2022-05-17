@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<div class="container">
+  <form>
+    <input type="text" [(ngModel)]="task" name="task" />
+    <button (click)="addTask()" type="button" *ngIf="!isEditing">
+      <i class="fa-solid fa-plus"></i>
+    </button>
+    <button *ngIf="isEditing" (click)="updateTask()">
+      <i class="fa-solid fa-check"></i>
+    </button>
+  </form>
+
+  <div class="todo-list-container">
+    <ul>
+      <li *ngFor="let item of todos">
+        <span>{{ item }}</span>
+        <div>
+          <button type="button" (click)="editTask(item)">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button type="button" (click)="removeTask(item)">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
